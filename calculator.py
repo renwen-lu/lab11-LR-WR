@@ -30,7 +30,7 @@ def exp(a, b):
 def subtract(a, b):
     return a - b
 
-def logarithm(base, x):
+def log(base, x):
     if base <= 0 or x <= 0:
         raise ValueError("Invalid input for logarithm")
 
