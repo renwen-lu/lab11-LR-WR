@@ -15,11 +15,10 @@ class TestCalculatorPartner1(unittest.TestCase):
         self.assertEqual(mul(0, 7), 0)
 
     def test_divide(self):
-  
         self.assertEqual(div(2, 10), 5) 
         self.assertAlmostEqual(div(2, 7), 3.5)
-       
- 
+
+
     def test_hypotenuse(self):
         self.assertEqual(hypotenuse(3, 4), 5)
         self.assertEqual(hypotenuse(5, 12), 13)
@@ -37,31 +36,24 @@ class TestCalculatorPartner1(unittest.TestCase):
         except ValueError:
             pass
 
-       try:
+        try:
             logarithm(-2, 8)
             self.fail("Expected ValueError not raised")
-       except ValueError:
-           pass
+        except ValueError:
+            pass
 
-       try:
-           logarithm(0, 10)
-           self.fail("Expected ValueError not raised")
-       except ValueError:
-           pass
+        try:
+            logarithm(0, 10)
+            self.fail("Expected ValueError not raised")
+        except ValueError:
+            pass
         
-       try:
-           logarithm(2, 0)
-           self.fail("Expected ValueError not raised")
-       except ValueError:
-           pass
+        try:
+            logarithm(2, 0)
+            self.fail("Expected ValueError not raised")
+        except ValueError:
+            pass
 
-
-
-
-
-
-
-   
     def test_add(self):
         self.assertEqual(add(2, 3), 5)
         self.assertEqual(add(-1, 4), 3)
