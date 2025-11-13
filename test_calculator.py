@@ -1,6 +1,6 @@
-https://github.com/renwen-lu/lab11-LR-WR
-Partner 1: Renwen Lu
-Partner 2: Ruijin Wang
+#https://github.com/renwen-lu/lab11-LR-WR
+#Partner 1: Renwen Lu
+#Partner 2: Ruijin Wang
 
 import unittest
 import math
