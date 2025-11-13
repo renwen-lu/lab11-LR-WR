@@ -27,7 +27,7 @@ def div(a, b):
 def exp(a, b):
     return a ** b
 
-def substract(a, b):
+def subtract(a, b):
     return a - b
 
 def logarithm(base, x):
