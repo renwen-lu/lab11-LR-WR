@@ -1,84 +1,37 @@
-import unittest
-from calculator import *
-
 # https://github.com/renwen-lu/lab11-LR-WR
 # Partner 1: Renwen Lu
 # Partner 2: Ruijin Wang
 
-class TestCalculator(unittest.TestCase):
-    ######### Partner 2
-    # def test_add(self): # 3 assertions
-    #     fill in code
+import unittest
+from calculator import *
 
-    # def test_subtract(self): # 3 assertions
-    #     fill in code
-    # ##########################
+class TestCalculator(unittest.TestCase):
 
     ######## Partner 1
-    def test_multiply(self):  # 3 assertions
+    def test_multiply(self):  
         self.assertEqual(mul(3, 4), 12)
         self.assertEqual(mul(-2, 5), -10)
         self.assertEqual(mul(0, 7), 0)
 
-    def test_divide(self):  # 3 assertions
+    def test_divide(self):  
         self.assertEqual(div(10, 2), 5)
         self.assertAlmostEqual(div(7, 2), 3.5)
         with self.assertRaises(ZeroDivisionError):
             div(5, 0)
-    # ##########################
 
-    import unittest
-    from calculator import *
-
-    # https://github.com/renwen-lu/lab11-LR-WR
-    # Partner 1: Renwen Lu
-    # Partner 2: Ruijin Wang
 
     class TestCalculator(unittest.TestCase):
         ######### Partner 2
-        def test_add(self):  # 3 assertions
+        def test_add(self): 
             self.assertEqual(add(2, 3), 5)
             self.assertEqual(add(-1, 4), 3)
             self.assertEqual(add(0, 0), 0)
 
-        def test_subtract(self):  # 3 assertions
+        def test_subtract(self): 
             self.assertEqual(sub(5, 3), 2)
             self.assertEqual(sub(0, 7), -7)
             self.assertEqual(sub(-2, -3), 1)
 
-        ##########################
-
-        ######## Partner 1
-        def test_multiply(self):  # 3 assertions
-            self.assertEqual(mul(3, 4), 12)
-            self.assertEqual(mul(-2, 5), -10)
-            self.assertEqual(mul(0, 7), 0)
-
-        def test_divide(self):  # 3 assertions
-            self.assertEqual(div(10, 2), 5)
-            self.assertAlmostEqual(div(7, 2), 3.5)
-            with self.assertRaises(ZeroDivisionError):
-                div(5, 0)
-
-        ##########################
-
-        ######## Partner 2
-        def test_divide_by_zero(self):  # 1 assertion
-            with self.assertRaises(ZeroDivisionError):
-                div(5, 0)
-
-        def test_logarithm(self):  # 3 assertions
-            self.assertEqual(log(10, 100), 2)
-            self.assertAlmostEqual(log(2, 8), 3)
-            self.assertAlmostEqual(log(3, 27), 3)
-
-        def test_log_invalid_base(self):  # 1 assertion
-            with self.assertRaises(ValueError):
-                log(-2, 8)
-
-
-
-        ######## Partner 1
         def test_log_invalid_argument(self):
             with self.assertRaises(ValueError):
                 log(-2, 8)
