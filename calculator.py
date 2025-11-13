@@ -27,10 +27,10 @@ def div(a, b):
 def exp(a, b):
     return a ** b
 
-def sub(a, b):
+def substract(a, b):
     return a - b
 
-def log(base, x):
+def logarithm(base, x):
     if base <= 0 or x <= 0:
         raise ValueError("Invalid input for logarithm")
 
