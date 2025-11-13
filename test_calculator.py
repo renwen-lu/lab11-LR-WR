@@ -76,7 +76,7 @@ class TestCalculatorPartner1(unittest.TestCase):
         with self.assertRaises(ValueError):
             logarithm(1, 10) 
         with self.assertRaises(ValueError):
-            logaritmn(-2, 8)  
+            logarithmn(-2, 8)  
         with self.assertRaises(ValueError):
             logarithmn(10, -1) 
 
