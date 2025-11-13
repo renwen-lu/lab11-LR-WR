@@ -30,8 +30,37 @@ class TestCalculatorPartner1(unittest.TestCase):
         with self.assertRaises(ValueError):
             square_root(-1)
 
+    def test_log_invalid_argument(self):
+    try:
+        logarithm(10, -5)
+        self.fail("Expected ValueError not raised")
+    except ValueError:
+        pass
 
-class TestCalculatorPartner2(unittest.TestCase):
+    try:
+        logarithm(-2, 8)
+        self.fail("Expected ValueError not raised")
+    except ValueError:
+        pass
+
+    try:
+        logarithm(0, 10)
+        self.fail("Expected ValueError not raised")
+    except ValueError:
+        pass
+        
+    try:
+        logarithm(2, 0)
+        self.fail("Expected ValueError not raised")
+    except ValueError:
+        pass
+
+
+
+
+
+
+
    
     def test_add(self):
         self.assertEqual(add(2, 3), 5)
