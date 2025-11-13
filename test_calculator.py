@@ -74,11 +74,11 @@ class TestCalculatorPartner1(unittest.TestCase):
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
-            log(1, 10) 
+            logarithm(1, 10) 
         with self.assertRaises(ValueError):
-            log(-2, 8)  
+            logaritmn(-2, 8)  
         with self.assertRaises(ValueError):
-            log(10, -1) 
+            logarithmn(10, -1) 
 
 
 if __name__ == "__main__":
