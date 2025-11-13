@@ -3,11 +3,10 @@
 # Partner 2: Ruijin Wang
 
 import unittest
+import math
 from calculator import *
 
 class TestCalculatorPartner1(unittest.TestCase):
-
-    ######## Partner 1
     def test_multiply(self):  
         self.assertEqual(mul(3, 4), 12)
         self.assertEqual(mul(-2, 5), -10)
@@ -16,25 +15,29 @@ class TestCalculatorPartner1(unittest.TestCase):
     def test_divide(self):  
         self.assertEqual(div(10, 2), 5)
         self.assertAlmostEqual(div(7, 2), 3.5)
-        with self.assertRaises(ZeroDivisionError):
+        try:
             div(5, 0)
-
+            self.fail("Expected ZeroDivisionError not raised")
+        except ZeroDivisionError:
+            pass
 
 class TestCalculatorPartner2(unittest.TestCase):
-        ######### Partner 2
     def test_add(self): 
         self.assertEqual(add(2, 3), 5)
         self.assertEqual(add(-1, 4), 3)
         self.assertEqual(add(0, 0), 0)
 
     def test_subtract(self): 
-        self.assertEqual(sub(5, 3), 2)
-        self.assertEqual(sub(0, 7), -7)
-        self.assertEqual(sub(-2, -3), 1)
+        self.assertEqual(subtract(5, 3), 2)
+        self.assertEqual(subtract(0, 7), -7)
+        self.assertEqual(subtract(-2, -3), 1)
 
     def test_log_invalid_argument(self):
-        with self.assertRaises(ValueError):
-            log(-2, 8)
+        try:
+            logarithm(-2, 8)
+            self.fail("Expected ValueError not raised")
+        except ValueError:
+            pass
 
     def test_hypotenuse(self):
         self.assertEqual(hypotenuse(3, 4), 5)
@@ -42,12 +45,15 @@ class TestCalculatorPartner2(unittest.TestCase):
         self.assertAlmostEqual(hypotenuse(1.5, 2.0), math.hypot(1.5, 2.0))
 
     def test_sqrt(self):
+        try:
+            square_root(-1)
+            self.fail("Expected ValueError not raised")
+        except ValueError:
+            pass
         self.assertEqual(square_root(9), 3)
         self.assertAlmostEqual(square_root(2.25), 1.5)
-        with self.assertRaises(ValueError):
-            square_root(-1)
 
-    # Do not touch this
-    if __name__ == "__main__":
-        unittest.main()
+if __name__ == "__main__":
+    unittest.main()
+
 
