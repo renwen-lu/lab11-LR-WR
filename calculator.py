@@ -33,5 +33,6 @@ def subtract(a, b):
 def logarithm(base, x):
     if base <= 0 or x <= 0:
         raise ValueError("Invalid input for logarithm")
+    return math.log(x, base)
 
 
