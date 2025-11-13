@@ -31,29 +31,29 @@ class TestCalculatorPartner1(unittest.TestCase):
             square_root(-1)
 
     def test_log_invalid_argument(self):
-    try:
-        logarithm(10, -5)
-        self.fail("Expected ValueError not raised")
-    except ValueError:
-        pass
+        try:
+            logarithm(10, -5)
+            self.fail("Expected ValueError not raised")
+        except ValueError:
+            pass
 
-    try:
-        logarithm(-2, 8)
-        self.fail("Expected ValueError not raised")
-    except ValueError:
-        pass
+       try:
+            logarithm(-2, 8)
+            self.fail("Expected ValueError not raised")
+       except ValueError:
+           pass
 
-    try:
-        logarithm(0, 10)
-        self.fail("Expected ValueError not raised")
-    except ValueError:
-        pass
+       try:
+           logarithm(0, 10)
+           self.fail("Expected ValueError not raised")
+       except ValueError:
+           pass
         
-    try:
-        logarithm(2, 0)
-        self.fail("Expected ValueError not raised")
-    except ValueError:
-        pass
+       try:
+           logarithm(2, 0)
+           self.fail("Expected ValueError not raised")
+       except ValueError:
+           pass
 
 
 
